@@ -12,23 +12,23 @@ namespace Vojna
 		virtual public void StartRound()
 		{
 			// Variant with delegate for practice
-			// CardProcessor playerPutCardOnTable, aiPutCardOnTable;
-			// playerPutCardOnTable = new CardProcessor(Table.PutCardOnTable);
-			// aiPutCardOnTable = new CardProcessor(Table.PutCardOnTable);
+			CardProcessor playerPutCardOnTable, aiPutCardOnTable;
+			playerPutCardOnTable = new CardProcessor(Table.PutCardOnTable);
+			aiPutCardOnTable = new CardProcessor(Table.PutCardOnTable);
 			
-			// Announcements.AnnouncPlayerBasicRound(Table.HumanPlayer().Name);
-			// playerPutCardOnTable.Invoke(Table.HumanPlayer());
-			// Console.Read();
+			Announcements.AnnouncPlayerBasicRound(Table.HumanPlayer().Name);
+			playerPutCardOnTable(Table.HumanPlayer());
+			Console.Read();
 			
-			// Announcements.AnnouncPlayerBasicRound(Table.AiPlayer().Name);
-			// aiPutCardOnTable(Table.AiPlayer());
-			// Console.Read();
-			foreach (Player player in Table.Players)
-			{
-				Announcements.AnnouncPlayerBasicRound(player.Name);
-				Table.PutCardOnTable(player);
-				Console.Read();
-			}
+			Announcements.AnnouncPlayerBasicRound(Table.AiPlayer().Name);
+			aiPutCardOnTable(Table.AiPlayer());
+			Console.Read();
+			// foreach (Player player in Table.Players)
+			// {
+			// 	Announcements.AnnouncPlayerBasicRound(player.Name);
+			// 	Table.PutCardOnTable(player);
+			// 	Console.Read();
+			// }
 		}
 		
 		public void Decision()

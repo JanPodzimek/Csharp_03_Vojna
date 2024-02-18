@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+3ataWP0P/qiQjwgW3S25kgyG0faR2eubI3BbC0VhLcuEJaJTGCrkvPPl2+kolRao4DSBayW/1jvh5kW5kUlAA==",
+  "dgSpecHash": "ypApzE254sAJN8tCfA0eF5P6GrL7nSTzbcrdGknuP759bFEfXYWfqCyfOjrumGuHYq+RnSW198cRwufwDuwQOg==",
   "success": true,
-  "projectFilePath": "/Users/janpodzimek/Documents/Vojna/VojnaRemake.csproj",
+  "projectFilePath": "/Users/janpodzimek/02_C#_Training/Vojna/Csharp_03_Vojna/VojnaRemake.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

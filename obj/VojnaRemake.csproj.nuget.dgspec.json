@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/janpodzimek/Documents/Vojna/VojnaRemake.csproj": {}
+    "/Users/janpodzimek/02_C#_Training/Vojna/Csharp_03_Vojna/VojnaRemake.csproj": {}
   },
   "projects": {
-    "/Users/janpodzimek/Documents/Vojna/VojnaRemake.csproj": {
+    "/Users/janpodzimek/02_C#_Training/Vojna/Csharp_03_Vojna/VojnaRemake.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/janpodzimek/Documents/Vojna/VojnaRemake.csproj",
+        "projectUniqueName": "/Users/janpodzimek/02_C#_Training/Vojna/Csharp_03_Vojna/VojnaRemake.csproj",
         "projectName": "VojnaRemake",
-        "projectPath": "/Users/janpodzimek/Documents/Vojna/VojnaRemake.csproj",
+        "projectPath": "/Users/janpodzimek/02_C#_Training/Vojna/Csharp_03_Vojna/VojnaRemake.csproj",
         "packagesPath": "/Users/janpodzimek/.nuget/packages/",
-        "outputPath": "/Users/janpodzimek/Documents/Vojna/obj/",
+        "outputPath": "/Users/janpodzimek/02_C#_Training/Vojna/Csharp_03_Vojna/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/janpodzimek/.nuget/NuGet/NuGet.Config"

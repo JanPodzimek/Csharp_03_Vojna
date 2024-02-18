@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = VojnaRemake
-build_property.ProjectDir = /Users/janpodzimek/Documents/Vojna/
+build_property.ProjectDir = /Users/janpodzimek/02_C#_Training/Vojna/Csharp_03_Vojna/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

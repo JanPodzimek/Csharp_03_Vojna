@@ -63,11 +63,7 @@ namespace Vojna
 		{
 			Table.AddAllWonCardsToHand();
 			Announcements.AnnouncBasicRoundWinner(Table);
-			Announcements.AnnoucScore(
-				Table.HumanPlayer().Cards.Count, 
-				Table.AiPlayer().Cards.Count, 
-				Table.HumanPlayer().Name, 
-				Table.AiPlayer().Name);
+			Announcements.AnnouncScore(Table.HumanPlayer(), Table.AiPlayer());
 			Table.ClearTable(); 
 			Console.Clear();
 		}

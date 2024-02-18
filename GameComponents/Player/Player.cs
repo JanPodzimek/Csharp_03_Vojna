@@ -22,6 +22,15 @@ namespace Vojna
 			Name = name;
 			Cards = new List<Card>();
 		}
+		
+		public static bool CheckCards(Player p1, Player p2)
+		{
+			if (p1.Cards.Count > 0 && p2.Cards.Count > 0)
+			{
+				return true;
+			}
+			return false;
+		}
 
 		public override string ToString()
 		{

@@ -33,15 +33,18 @@ namespace Vojna
 		public static void AnnouncExtraRoundWinner(Table table)
 		{
 			Player winner = table.Players.First(player => player.PlayerId == table.WinnerId);
-			Console.WriteLine($"{winner} won the extra round and takes all the played cards!");
+			Console.WriteLine($"{winner} won the extra round and took all the played cards!");
 			if (table.HumanPlayer().Cards.Count < 1 || table.AiPlayer().Cards.Count < 1)
 				AnnouncGameWinner(table);
 		}
 		
-		public static void AnnoucScore(int player1score, int player2score, string player1name, string player2name)
+		public static void AnnouncScore(Player p1, Player p2)
 		{
-			Console.WriteLine($"The score is {player1name} [{player1score}] : [{player2score}] {player2name}");
+			if (Player.CheckCards(p1, p2))
+			{
+			Console.WriteLine($"The score is {p1.Name} [{p1.Cards.Count}] : [{p2.Cards.Count}] {p2.Name}");
 			Console.Read();
+			}
 		}
 		
 		public static void AnnouncDraw()

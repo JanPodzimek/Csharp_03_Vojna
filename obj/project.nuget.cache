@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "vy5mRUIvurROOF6tATqqsQqCjFuKcDe1RavGaEfgGx/q4gO1PqSjffaBAOhEWV41V1+FGyQ03LoyrWyBIVEsFw==",
+  "dgSpecHash": "96QL/I9E2201wSjLtd0j/NKbbgVY8voArwAJ2JLy10EAFqlN2qtpdlxHsOGSRs0XCMlDCGI34dUsT75fxg21hQ==",
   "success": true,
   "projectFilePath": "/Users/janpodzimek/Documents/Vojna/VojnaRemake.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/janpodzimek/.nuget/packages/microsoft.netcore.app.ref/7.0.14/microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
+    "/Users/janpodzimek/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.14/microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512",
+    "/Users/janpodzimek/.nuget/packages/microsoft.netcore.app.host.osx-x64/7.0.14/microsoft.netcore.app.host.osx-x64.7.0.14.nupkg.sha512"
+  ],
   "logs": []
 }

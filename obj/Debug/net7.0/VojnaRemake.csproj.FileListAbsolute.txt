@@ -13,7 +13,6 @@
 /Users/janpodzimek/Documents/VojnaRemake/obj/Debug/net7.0/VojnaRemake.pdb
 /Users/janpodzimek/Documents/VojnaRemake/obj/Debug/net7.0/VojnaRemake.genruntimeconfig.cache
 /Users/janpodzimek/Documents/VojnaRemake/obj/Debug/net7.0/ref/VojnaRemake.dll
-/Users/janpodzimek/Documents/Vojna/obj/Debug/net7.0/VojnaRemake.csproj.AssemblyReference.cache
 /Users/janpodzimek/Documents/Vojna/obj/Debug/net7.0/VojnaRemake.GeneratedMSBuildEditorConfig.editorconfig
 /Users/janpodzimek/Documents/Vojna/obj/Debug/net7.0/VojnaRemake.AssemblyInfoInputs.cache
 /Users/janpodzimek/Documents/Vojna/obj/Debug/net7.0/VojnaRemake.AssemblyInfo.cs
@@ -28,3 +27,4 @@
 /Users/janpodzimek/Documents/Vojna/bin/Debug/net7.0/VojnaRemake.pdb
 /Users/janpodzimek/Documents/Vojna/obj/Debug/net7.0/VojnaRemake.genruntimeconfig.cache
 /Users/janpodzimek/Documents/Vojna/obj/Debug/net7.0/ref/VojnaRemake.dll
+/Users/janpodzimek/Documents/Vojna/obj/Debug/net7.0/VojnaRemake.sourcelink.json

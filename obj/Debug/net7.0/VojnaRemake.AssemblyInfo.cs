@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VojnaRemake")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+70ef7416421d61b30e6e5c0c0e0d674e606d3d53")]
 [assembly: System.Reflection.AssemblyProductAttribute("VojnaRemake")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VojnaRemake")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

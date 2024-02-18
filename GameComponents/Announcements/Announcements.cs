@@ -3,6 +3,17 @@ namespace Vojna
 	public delegate bool SetRightAnnounc(Game IsExtraRound);
 	public static class Announcements 
 	{
+		public static void AnnouncPlayer(string name, int numberOfCards)
+		{
+			if (!Game.IsExtraRound)
+			{
+				AnnouncPlayerBasicRound(name);
+			}
+			else 
+			{
+				AnnouncPlayerExtraRound(name, numberOfCards);
+			}
+		}
 		
 		public static void AnnouncPlayerBasicRound(string name)
 		{
@@ -28,13 +39,13 @@ namespace Vojna
 		public static void AnnouncRoundWinner(Table table)
 		{
 			Player winner = table.Players.First(player => player.PlayerId == table.WinnerId);
-			GetRightRoundAnnounc(table);
+			WinnerGetRightRoundAnnounc(table);
 			
 			if (!Player.CheckCards(table.HumanPlayer(), table.AiPlayer()))
 				AnnouncGameWinner(table);
 		}
-		
-		public static void GetRightRoundAnnounc(Table table)
+	
+		public static void WinnerGetRightRoundAnnounc(Table table)
 		{
 			Player winner = table.Players.First(player => player.PlayerId == table.WinnerId);
 			if (!Game.IsExtraRound)

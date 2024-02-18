@@ -16,11 +16,11 @@ namespace Vojna
 			playerPutCardOnTable = new CardProcessor(Table.PutCardOnTable);
 			aiPutCardOnTable = new CardProcessor(Table.PutCardOnTable);
 			
-			Announcements.AnnouncPlayerBasicRound(Table.HumanPlayer().Name);
+			Announcements.AnnouncPlayer(Table.HumanPlayer().Name, ExtraRound.AlteredNumberOfCardsShowedInDraw);
 			playerPutCardOnTable(Table.HumanPlayer());
 			// Console.Read();
 			
-			Announcements.AnnouncPlayerBasicRound(Table.AiPlayer().Name);
+			Announcements.AnnouncPlayer(Table.AiPlayer().Name, ExtraRound.AlteredNumberOfCardsShowedInDraw);
 			aiPutCardOnTable(Table.AiPlayer());
 			// Console.Read();
 			

@@ -3,7 +3,7 @@ namespace Vojna
 	public class ExtraRound : BasicRound 
 	{
 		public const int StandardNumberOfCardsShowedInDraw = 10;
-		public int AlteredNumberOfCardsShowedInDraw { get; set;}
+		public static int AlteredNumberOfCardsShowedInDraw { get; set;}
 		
 		public ExtraRound(Table table) : base(table) 
 		{
@@ -15,7 +15,7 @@ namespace Vojna
 			SetNumberOfCardsForDraw();
 			foreach (Player player in Table.Players)
 			{
-				Announcements.AnnouncPlayerExtraRound(player.Name, AlteredNumberOfCardsShowedInDraw);
+				Announcements.AnnouncPlayer(player.Name, AlteredNumberOfCardsShowedInDraw);
 				for (int i = 0; i < AlteredNumberOfCardsShowedInDraw; i++)
 				{
 					Table.PutCardOnTable(player);

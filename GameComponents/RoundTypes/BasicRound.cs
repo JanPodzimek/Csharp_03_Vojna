@@ -62,7 +62,7 @@ namespace Vojna
 		public virtual void FinishRound()
 		{
 			Table.AddAllWonCardsToHand();
-			Announcements.AnnouncBasicRoundWinner(Table);
+			Announcements.AnnouncRoundWinner(Table);
 			Announcements.AnnouncScore(Table.HumanPlayer(), Table.AiPlayer());
 			Table.ClearTable(); 
 			Console.Clear();

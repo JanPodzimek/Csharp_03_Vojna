@@ -27,7 +27,7 @@ namespace Vojna
 		public override void FinishRound()
 		{
 			Table.AddAllWonCardsToHand();
-			Announcements.AnnouncExtraRoundWinner(Table);
+			Announcements.AnnouncRoundWinner(Table);
 			Announcements.AnnouncScore(Table.HumanPlayer(), Table.AiPlayer());
 			Table.ClearTable();
 			Console.Clear();

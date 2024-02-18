@@ -8,12 +8,15 @@ namespace Vojna
 		public Table Table { get; set; }
 		public BasicRound BasicRound { get; set; }
 		public ExtraRound ExtraRound { get; set; } 
+		public static bool RoundType { get; set; } 
+		// RoundType = false, means Basic round, otherwise means Extra round
 
 		public Game() {
 			Table = new Table();
 			Table.DealTheCards(Table.Deck);
 			BasicRound = new BasicRound(Table);
 			ExtraRound = new ExtraRound(Table);
+			RoundType = false;
 		}
 		
 		public void SetUp()
@@ -24,8 +27,9 @@ namespace Vojna
 		public void Play()
 		{
 			Announcements.AnnoucStart();
-			while (Table.Players[0].Cards.Count > 0 && Table.Players[1].Cards.Count > 0)
+			while (Player.CheckCards(Table.HumanPlayer(), Table.AiPlayer()))
 			{
+				RoundType = false;
 				BasicRound.StartRound();
 				BasicRound.Decision();
 				if (!Table.Draw) 
@@ -34,6 +38,7 @@ namespace Vojna
 				}
 				else 
 				{
+					RoundType = true;
 					ExtraRound.StartRound();
 					ExtraRound.Decision();
 					if (!Table.Draw) 
@@ -42,7 +47,7 @@ namespace Vojna
 					}
 					else 
 					{
-						while (Table.Draw && Table.Players[0].Cards.Count > 0 && Table.Players[1].Cards.Count > 0)
+						while (Table.Draw && Player.CheckCards(Table.HumanPlayer(), Table.AiPlayer()))
 						{
 							BasicRound.StartRound();
 							BasicRound.Decision();

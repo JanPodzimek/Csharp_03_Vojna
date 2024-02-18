@@ -1,5 +1,6 @@
 namespace Vojna 
 {
+	public delegate bool SetRightAnnounc(Game roundType);
 	public static class Announcements 
 	{
 		
@@ -22,21 +23,45 @@ namespace Vojna
 			Console.Read();
 		}
 		
-		public static void AnnouncBasicRoundWinner(Table table)
+		// public static bool IsBasicRound
+		
+		public static void AnnouncRoundWinner(Table table)
 		{
 			Player winner = table.Players.First(player => player.PlayerId == table.WinnerId);
-			Console.WriteLine($"{winner} won the round!");
-			if (table.HumanPlayer().Cards.Count < 1 || table.AiPlayer().Cards.Count < 1)
+			GetRightRoundAnnounc(table);
+			
+			if (!Player.CheckCards(table.HumanPlayer(), table.AiPlayer()))
 				AnnouncGameWinner(table);
 		}
 		
-		public static void AnnouncExtraRoundWinner(Table table)
+		public static void GetRightRoundAnnounc(Table table)
 		{
 			Player winner = table.Players.First(player => player.PlayerId == table.WinnerId);
-			Console.WriteLine($"{winner} won the extra round and took all the played cards!");
-			if (table.HumanPlayer().Cards.Count < 1 || table.AiPlayer().Cards.Count < 1)
-				AnnouncGameWinner(table);
+			if (!Game.RoundType)
+			{
+				Console.WriteLine($"{winner} won the round!");
+			}
+			else 
+			{
+				Console.WriteLine($"{winner} won the extra round and took all the played cards!");
+			}
 		}
+		
+		// public static void AnnouncBasicRoundWinner(Table table)
+		// {
+		// 	Player winner = table.Players.First(player => player.PlayerId == table.WinnerId);
+		// 	Console.WriteLine($"{winner} won the round!");
+		// 	if (!Player.CheckCards(table.HumanPlayer(), table.AiPlayer()))
+		// 		AnnouncGameWinner(table);
+		// }
+		
+		// public static void AnnouncExtraRoundWinner(Table table)
+		// {
+		// 	Player winner = table.Players.First(player => player.PlayerId == table.WinnerId);
+		// 	Console.WriteLine($"{winner} won the extra round and took all the played cards!");
+		// 	if (!Player.CheckCards(table.HumanPlayer(), table.AiPlayer()))
+		// 		AnnouncGameWinner(table);
+		// }
 		
 		public static void AnnouncScore(Player p1, Player p2)
 		{

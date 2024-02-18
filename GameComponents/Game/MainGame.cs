@@ -37,20 +37,12 @@ namespace Vojna
 				else 
 				{
 					IsExtraRound = true;
-					StartRound();
-					if (!Table.Draw) 
-					{
-						FinishRound();
-					}
-					else 
-					{
-						while (Table.Draw && Player.CheckCards(Table.HumanPlayer(), Table.AiPlayer()))
+					while (Table.Draw && Player.CheckCards(Table.HumanPlayer(), Table.AiPlayer()))
 						{
 							StartRound();
 						}
 						
 						FinishRound();
-					}
 				}
 			}	
 		}

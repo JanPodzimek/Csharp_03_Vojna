@@ -24,6 +24,11 @@ namespace Vojna
 			}
 		}
 		
+		public void AdditionExtraRound()
+		{
+			
+		}
+		
 		public override void FinishRound()
 		{
 			Table.AddAllWonCardsToHand();

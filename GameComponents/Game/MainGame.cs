@@ -8,15 +8,14 @@ namespace Vojna
 		public Table Table { get; set; }
 		public BasicRound BasicRound { get; set; }
 		public ExtraRound ExtraRound { get; set; } 
-		public static bool RoundType { get; set; } 
-		// RoundType = false, means Basic round, otherwise means Extra round
+		public static bool IsExtraRound { get; set; } 
 
 		public Game() {
 			Table = new Table();
 			Table.DealTheCards(Table.Deck);
 			BasicRound = new BasicRound(Table);
 			ExtraRound = new ExtraRound(Table);
-			RoundType = false;
+			IsExtraRound = false;
 		}
 		
 		public void SetUp()
@@ -29,21 +28,19 @@ namespace Vojna
 			Announcements.AnnoucStart();
 			while (Player.CheckCards(Table.HumanPlayer(), Table.AiPlayer()))
 			{
-				RoundType = false;
-				BasicRound.StartRound();
-				BasicRound.Decision();
+				IsExtraRound = false;
+				StartRound();
 				if (!Table.Draw) 
 				{
-					BasicRound.FinishRound();
+					FinishRound();
 				}
 				else 
 				{
-					RoundType = true;
-					ExtraRound.StartRound();
-					ExtraRound.Decision();
+					IsExtraRound = true;
+					StartRound();
 					if (!Table.Draw) 
 					{
-						ExtraRound.FinishRound();
+						FinishRound();
 					}
 					else 
 					{
@@ -57,7 +54,33 @@ namespace Vojna
 					}
 				}
 			}	
-		} 
+		}
+		
+		public void StartRound()
+		{
+			if (!IsExtraRound)
+			{
+				BasicRound.StartRound();
+				BasicRound.Decision();
+			}
+			else 
+			{
+				ExtraRound.StartRound();
+				ExtraRound.Decision();
+			}
+		}
+		
+		public void FinishRound()
+		{
+			if (!IsExtraRound)
+			{
+				BasicRound.FinishRound();
+			}
+			else 
+			{
+				ExtraRound.FinishRound();
+			}
+		}
 	}
 }
 		

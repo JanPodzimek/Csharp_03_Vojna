@@ -1,6 +1,6 @@
 namespace Vojna 
 {
-	public delegate bool SetRightAnnounc(Game roundType);
+	public delegate bool SetRightAnnounc(Game IsExtraRound);
 	public static class Announcements 
 	{
 		
@@ -37,7 +37,7 @@ namespace Vojna
 		public static void GetRightRoundAnnounc(Table table)
 		{
 			Player winner = table.Players.First(player => player.PlayerId == table.WinnerId);
-			if (!Game.RoundType)
+			if (!Game.IsExtraRound)
 			{
 				Console.WriteLine($"{winner} won the round!");
 			}

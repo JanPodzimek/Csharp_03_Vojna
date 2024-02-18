@@ -2,23 +2,23 @@ namespace Vojna
 {
 	public class ExtraRound : BasicRound 
 	{
-		public int NumberOfCards { get; set; }
+		public const int StandardNumberOfCardsShowedInDraw = 10;
+		public int AlteredNumberOfCardsShowedInDraw { get; set;}
 		
 		public ExtraRound(Table table) : base(table) 
 		{
-			NumberOfCards = 5;
+			AlteredNumberOfCardsShowedInDraw = StandardNumberOfCardsShowedInDraw;
 		}
 		
 		override public void StartRound()
 		{
-			SetNumberOfCards();
+			SetNumberOfCardsForDraw();
 			foreach (Player player in Table.Players)
 			{
-				Announcements.AnnouncPlayerExtraRound(player.Name, NumberOfCards);
-				for (int i = 0; i < NumberOfCards; i++)
+				Announcements.AnnouncPlayerExtraRound(player.Name, AlteredNumberOfCardsShowedInDraw);
+				for (int i = 0; i < AlteredNumberOfCardsShowedInDraw; i++)
 				{
 					Table.PutCardOnTable(player);
-					
 					// Console.Read();
 				}
 			}
@@ -33,16 +33,18 @@ namespace Vojna
 			Console.Clear();
 		}
 		
-		public void SetNumberOfCards()
+		public void SetNumberOfCardsForDraw()
 		{
-			int lessCards = 5;
+			int numberOfCards = StandardNumberOfCardsShowedInDraw;
 			
-			if (Table.HumanPlayer().Cards.Count < 5 || Table.AiPlayer().Cards.Count < 5)
+			if (Table.HumanPlayer().Cards.Count < StandardNumberOfCardsShowedInDraw || 
+				Table.AiPlayer().Cards.Count < StandardNumberOfCardsShowedInDraw)
 			{
-				lessCards = Math.Min(Table.HumanPlayer().Cards.Count, Table.AiPlayer().Cards.Count);
+				numberOfCards = Math.Min(Table.HumanPlayer().Cards.Count, Table.AiPlayer().Cards.Count);
+				AlteredNumberOfCardsShowedInDraw = numberOfCards; return;
 			}
 			
-			NumberOfCards = lessCards;
+			AlteredNumberOfCardsShowedInDraw = StandardNumberOfCardsShowedInDraw;
 		}
 	}
 }

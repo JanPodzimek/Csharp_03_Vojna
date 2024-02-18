@@ -19,14 +19,9 @@ namespace Vojna
 				{
 					Table.PutCardOnTable(player);
 					
-					Console.Read();
+					// Console.Read();
 				}
 			}
-		}
-		
-		public void AdditionExtraRound()
-		{
-			
 		}
 		
 		public override void FinishRound()

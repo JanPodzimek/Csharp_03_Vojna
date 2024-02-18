@@ -46,11 +46,10 @@ namespace Vojna
 					{
 						while (Table.Draw && Player.CheckCards(Table.HumanPlayer(), Table.AiPlayer()))
 						{
-							BasicRound.StartRound();
-							BasicRound.Decision();
+							StartRound();
 						}
 						
-						ExtraRound.FinishRound();
+						FinishRound();
 					}
 				}
 			}	

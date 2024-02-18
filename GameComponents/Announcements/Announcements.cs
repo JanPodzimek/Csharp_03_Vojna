@@ -11,7 +11,7 @@ namespace Vojna
 		
 		public static void AnnouncPlayerExtraRound(string name, int numberOfCards)
 		{
-			Console.WriteLine($"{name} plays another {numberOfCards} cards!");
+			Console.WriteLine($"{name} plays another {numberOfCards} card(s)!");
 		}
 		
 		public static void AnnoucStart()
@@ -20,7 +20,7 @@ namespace Vojna
 			Console.WriteLine(@"\/ [] _| |\| /-\");
 			Console.WriteLine();
 			Console.WriteLine("Press enter to start the game...");
-			Console.Read();
+			// Console.Read();
 		}
 		
 		// public static bool IsBasicRound
@@ -68,7 +68,7 @@ namespace Vojna
 			if (Player.CheckCards(p1, p2))
 			{
 			Console.WriteLine($"The score is {p1.Name} [{p1.Cards.Count}] : [{p2.Cards.Count}] {p2.Name}");
-			Console.Read();
+			// Console.Read();
 			}
 		}
 		
@@ -77,7 +77,7 @@ namespace Vojna
 			Console.WriteLine();
 			Console.WriteLine("It's a DRAW!");
 			Console.WriteLine();
-			Console.Read();
+			// Console.Read();
 		}
 		
 		public static void AnnouncGameWinner(Table table)

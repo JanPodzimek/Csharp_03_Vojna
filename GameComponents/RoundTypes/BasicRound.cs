@@ -18,11 +18,12 @@ namespace Vojna
 			
 			Announcements.AnnouncPlayerBasicRound(Table.HumanPlayer().Name);
 			playerPutCardOnTable(Table.HumanPlayer());
-			Console.Read();
+			// Console.Read();
 			
 			Announcements.AnnouncPlayerBasicRound(Table.AiPlayer().Name);
 			aiPutCardOnTable(Table.AiPlayer());
-			Console.Read();
+			// Console.Read();
+			
 			// foreach (Player player in Table.Players)
 			// {
 			// 	Announcements.AnnouncPlayerBasicRound(player.Name);

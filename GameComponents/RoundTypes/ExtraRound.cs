@@ -28,16 +28,7 @@ namespace Vojna
 		{
 			Table.AddAllWonCardsToHand();
 			Announcements.AnnouncExtraRoundWinner(Table);
-			
-			if (Table.HumanPlayer().Cards.Count > 0 && Table.AiPlayer().Cards.Count > 0)
-			{
-			Announcements.AnnoucScore(
-				Table.HumanPlayer().Cards.Count, 
-				Table.AiPlayer().Cards.Count, 
-				Table.HumanPlayer().Name, 
-				Table.AiPlayer().Name);
-			}
-			
+			Announcements.AnnouncScore(Table.HumanPlayer(), Table.AiPlayer());
 			Table.ClearTable();
 			Console.Clear();
 		}

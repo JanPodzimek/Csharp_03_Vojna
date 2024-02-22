@@ -58,22 +58,6 @@ namespace Vojna
 			}
 		}
 		
-		// public static void AnnouncBasicRoundWinner(Table table)
-		// {
-		// 	Player winner = table.Players.First(player => player.PlayerId == table.WinnerId);
-		// 	Console.WriteLine($"{winner} won the round!");
-		// 	if (!Player.CheckCards(table.HumanPlayer(), table.AiPlayer()))
-		// 		AnnouncGameWinner(table);
-		// }
-		
-		// public static void AnnouncExtraRoundWinner(Table table)
-		// {
-		// 	Player winner = table.Players.First(player => player.PlayerId == table.WinnerId);
-		// 	Console.WriteLine($"{winner} won the extra round and took all the played cards!");
-		// 	if (!Player.CheckCards(table.HumanPlayer(), table.AiPlayer()))
-		// 		AnnouncGameWinner(table);
-		// }
-		
 		public static void AnnouncScore(Player p1, Player p2)
 		{
 			if (Player.CheckCards(p1, p2))
